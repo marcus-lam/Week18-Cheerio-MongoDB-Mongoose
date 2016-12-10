@@ -1,0 +1,28 @@
+{
+  "name": "news_scraper",
+  "version": "1.0.0",
+  "description": "Cheerio and MongoDB/Mongoose HW",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marcus-lam/Week18-Cheerio-MongoDB-Mongoose.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marcus-lam/Week18-Cheerio-MongoDB-Mongoose/issues"
+  },
+  "homepage": "https://github.com/marcus-lam/Week18-Cheerio-MongoDB-Mongoose#readme",
+  "dependencies": {
+    "bluebird": "^3.4.6",
+    "body-parser": "^1.15.2",
+    "cheerio": "^0.22.0",
+    "express": "^4.14.0",
+    "express-handlebars": "^3.0.0",
+    "mongoose": "^4.7.2",
+    "request": "^2.79.0"
+  }
+}
