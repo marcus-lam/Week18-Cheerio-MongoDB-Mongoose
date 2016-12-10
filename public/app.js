@@ -10,10 +10,10 @@ $(document).ready(function() {
         // Append the appropriate information on the page.
         var onionNews = "";
         onionNews += "<div data-id='" + data[i]._id + "'>";
-        onionNews += "<h2>" + data[i].title + "</h2>";
+        onionNews += "<h2 class='text-center'>" + data[i].title + "</h2>";
         onionNews += "<img src = " + data[i].image + ">";
-        onionNews += "<h4>" + data[i].summary + "</h4>";
-        onionNews += "<a href = " + data[i].link + ">Click For Full Article" + "</a>";
+        onionNews += "<h4 class='text-center'>" + data[i].summary + "</h4>";
+        onionNews += "<p class='text-center'><a target='_blank' href=//" + data[i].link + ">Click For Full Article" + "</a></p>";
         onionNews += "<hr>"
         $("#articles").append(onionNews);
       }
@@ -34,13 +34,14 @@ $(document).on("click", "#articles div", function() {
   }).done(function(data) {
     console.log(data);
     // The title of the article.
-    $("#notes").append("<h3>" + data.title + "</h3>");
+    $("#notes").append("<h3 class='text-center'>" + data.title + "</h3><br>");
     // An input to enter a new name.
     $("#notes").append("<input id='nameInput' name='name' placeholder='Name?'>");
     // A textarea to enter a new comment.
     $("#notes").append("<textarea id='commentInput' name='comment' placeholder='Comment?'></textarea>");
     // A button to submit a new note, with the ID of the article saved to it.
-    $("#notes").append("<button data-id='" + data._id + "' id='submitComment'>Submit Comment</button>");
+    $("#notes").append("<br><button data-id='" + data._id + "' id='submitComment'>Submit Comment</button>");
+    $("#notes").append("<img id='onionImg' src=" + "https://cdn.embed.ly/providers/logos/theonion.png" + ">");
 
     // If there's a note attached to the article.
     if (data.note) {
